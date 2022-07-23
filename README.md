@@ -1,5 +1,7 @@
 # thesis
 
+# additional resources
+- [Terms: Independent and Identically Distributed (IID)](https://www.youtube.com/watch?v=EGKbPww2_rc)
 ---
 ## Federated Learning: Collaborative Machine Learning
 ---
