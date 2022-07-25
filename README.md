@@ -8,6 +8,10 @@
 - [enumerate-in-python](https://www.geeksforgeeks.org/enumerate-in-python/)
 - [top-resources-to-learn-about-federated-learning](https://analyticsindiamag.com/top-resources-to-learn-about-federated-learning/)
 - [How to get started with FL](https://becominghuman.ai/federated-learning-collaborative-machine-learning-with-a-tutorial-on-how-to-get-started-2e7d286a204e)
+- [first fl implementation to follow](https://towardsdatascience.com/federated-learning-a-step-by-step-implementation-in-tensorflow-aac568283399)
+- [dl-fl-with-differential-privacy](https://xzhu0027.gitbook.io/blog/machine-learning/untitled/dl-fl-with-differential-privacy)
+- [fl videos](https://www.youtube.com/watch?v=2GCIjkqiorw&t=102s)
+- [example for NON_IID Data](https://stackoverflow.com/questions/13058379/example-for-non-iid-data#:~:text=Literally%2C%20non%20iid%20should%20be,be%20decided%20by%20each%20other.)
 
 ---
 ## Federated Learning: Collaborative Machine Learning
