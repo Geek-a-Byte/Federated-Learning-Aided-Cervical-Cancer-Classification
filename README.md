@@ -6,6 +6,8 @@
 - [Introduction to Neural Networks - The Nature of Code - web tuts](https://natureofcode.com/book/chapter-10-neural-networks/)
 - [what-is-the-use-of-verbose-in-keras-while-validating-the-model](https://stackoverflow.com/questions/47902295/what-is-the-use-of-verbose-in-keras-while-validating-the-model)
 - [enumerate-in-python](https://www.geeksforgeeks.org/enumerate-in-python/)
+- [top-resources-to-learn-about-federated-learning](https://analyticsindiamag.com/top-resources-to-learn-about-federated-learning/)
+- [How to get started with FL](https://becominghuman.ai/federated-learning-collaborative-machine-learning-with-a-tutorial-on-how-to-get-started-2e7d286a204e)
 
 ---
 ## Federated Learning: Collaborative Machine Learning
