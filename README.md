@@ -96,6 +96,7 @@ Keywords: Split Learning + Sparsification
 - [Terms: Independent and Identically Distributed (IID)](https://www.youtube.com/watch?v=EGKbPww2_rc)
 - [Introduction to Neural Networks - The Nature of Code - video tuts](https://www.youtube.com/watch?v=XJ7HLz9VYz0&list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh)
 - [fl videos](https://www.youtube.com/watch?v=2GCIjkqiorw&t=102s)
+- [Federated Learning in Healthcare Use Cases | Intel Software](https://www.youtube.com/watch?v=z5jJsvvfKbM&ab_channel=IntelSoftware)
 
 ### ``Stackoverflow``
 
