@@ -84,10 +84,12 @@ Keywords: Split Learning + Sparsification
 
 ### ```related papers```
 
+- [federated-learning-meets-blockchain](https://www.jpmorgan.com/technology/federated-learning-meets-blockchain)
 - [Blockchain-based federated learning methodologies in smart environments](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561346/)
 - [A Method of Federated Learning Based on Blockchain](https://dl.acm.org/doi/fullHtml/10.1145/3487075.3487143)
 - [BVFLEMR: an integrated federated learning and blockchain technology for cloud-based medical records recommendation system](https://journalofcloudcomputing.springeropen.com/articles/10.1186/s13677-022-00294-6)
 - [Blockchain for federated learning toward secure distributed machine learning systems: a systemic survey](https://link.springer.com/article/10.1007/s00500-021-06496-5)
+- [Blockchain-based Federated Learning: A Comprehensive Survey](https://www.researchgate.net/publication/355092879_Blockchain-based_Federated_Learning_A_Comprehensive_Survey)
 
 ### ``Youtube``
 
