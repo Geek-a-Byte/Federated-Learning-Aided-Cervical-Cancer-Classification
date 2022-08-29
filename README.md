@@ -1,4 +1,7 @@
 # thesis
+## ``TOC``
+- [related papers]
+
 
 ## ```related papers```
 -
@@ -17,9 +20,9 @@
 - [fl videos](https://www.youtube.com/watch?v=2GCIjkqiorw&t=102s)
 - [example for NON_IID Data](https://stackoverflow.com/questions/13058379/example-for-non-iid-data#:~:text=Literally%2C%20non%20iid%20should%20be,be%20decided%20by%20each%20other.)
 
----
-## Federated Learning: Collaborative Machine Learning
----
+
+## ``Federated Learning: Collaborative Machine Learning``
+
 
 Federated learning aims to train a single model from multiple data sources, under the constraint that data stays at the source and is not exchanged by the data sources (a.k.a. nodes, clients, or workers) nor by the central server orchestrating training, if present.
 
