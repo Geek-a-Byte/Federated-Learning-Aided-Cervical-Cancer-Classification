@@ -1,30 +1,43 @@
 # thesis
-## ``TOC``
+### ```status: Confused about what I am doing still```
+### ``TOC``
 - [related papers](#related-papers)
 - [github resources](#github-resources)
 - [useful blogs](#blogs)
-- [what is fl](#Federated Learning: Collaborative Machine Learning)
+- [what is fl](#federated-learning)
+- [useful videos](#youtube)
+- [SO](#stackoverflow)
+
+### ```github resources```
 
 
-## ```related papers```
+### ```related papers```
+
 -
 -
 
-## ```additional resources```
+### ``Youtube``
+
 - [Terms: Independent and Identically Distributed (IID)](https://www.youtube.com/watch?v=EGKbPww2_rc)
 - [Introduction to Neural Networks - The Nature of Code - video tuts](https://www.youtube.com/watch?v=XJ7HLz9VYz0&list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh)
-- [Introduction to Neural Networks - The Nature of Code - web tuts](https://natureofcode.com/book/chapter-10-neural-networks/)
+- [fl videos](https://www.youtube.com/watch?v=2GCIjkqiorw&t=102s)
+
+### ``Stackoverflow``
+
+- [example for NON_IID Data](https://stackoverflow.com/questions/13058379/example-for-non-iid-data#:~:text=Literally%2C%20non%20iid%20should%20be,be%20decided%20by%20each%20other.)
 - [what-is-the-use-of-verbose-in-keras-while-validating-the-model](https://stackoverflow.com/questions/47902295/what-is-the-use-of-verbose-in-keras-while-validating-the-model)
+
+## ```blogs```
+
+- [Introduction to Neural Networks - The Nature of Code - web tuts](https://natureofcode.com/book/chapter-10-neural-networks/)
 - [enumerate-in-python](https://www.geeksforgeeks.org/enumerate-in-python/)
 - [top-resources-to-learn-about-federated-learning](https://analyticsindiamag.com/top-resources-to-learn-about-federated-learning/)
 - [How to get started with FL](https://becominghuman.ai/federated-learning-collaborative-machine-learning-with-a-tutorial-on-how-to-get-started-2e7d286a204e)
 - [first fl implementation to follow](https://towardsdatascience.com/federated-learning-a-step-by-step-implementation-in-tensorflow-aac568283399)
 - [dl-fl-with-differential-privacy](https://xzhu0027.gitbook.io/blog/machine-learning/untitled/dl-fl-with-differential-privacy)
-- [fl videos](https://www.youtube.com/watch?v=2GCIjkqiorw&t=102s)
-- [example for NON_IID Data](https://stackoverflow.com/questions/13058379/example-for-non-iid-data#:~:text=Literally%2C%20non%20iid%20should%20be,be%20decided%20by%20each%20other.)
 
 
-## ``Federated Learning: Collaborative Machine Learning``
+### ``Federated Learning``
 
 
 Federated learning aims to train a single model from multiple data sources, under the constraint that data stays at the source and is not exchanged by the data sources (a.k.a. nodes, clients, or workers) nor by the central server orchestrating training, if present.
