@@ -84,8 +84,8 @@ Keywords: Split Learning + Sparsification
 
 ### ```related papers```
 
--
--
+- [BVFLEMR: an integrated federated learning and blockchain technology for cloud-based medical records recommendation system](https://journalofcloudcomputing.springeropen.com/articles/10.1186/s13677-022-00294-6)
+- [Blockchain for federated learning toward secure distributed machine learning systems: a systemic survey](https://link.springer.com/article/10.1007/s00500-021-06496-5)
 
 ### ``Youtube``
 
@@ -100,6 +100,7 @@ Keywords: Split Learning + Sparsification
 
 ### ```blogs```
 
+- [Work on the algorithm](https://www.tensorflow.org/federated/tutorials/building_your_own_federated_learning_algorithm)
 - [Introduction to Neural Networks - The Nature of Code - web tuts](https://natureofcode.com/book/chapter-10-neural-networks/)
 - [enumerate-in-python](https://www.geeksforgeeks.org/enumerate-in-python/)
 - [top-resources-to-learn-about-federated-learning](https://analyticsindiamag.com/top-resources-to-learn-about-federated-learning/)
