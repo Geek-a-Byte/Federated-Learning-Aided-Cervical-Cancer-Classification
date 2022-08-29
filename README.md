@@ -10,7 +10,7 @@
 
 ### ```github resources```
 
-### Frameworks
+### ``Frameworks``
 
 * EasyFL [[Github]](https://github.com/EasyFL-AI/EasyFL) [[Paper]](https://arxiv.org/abs/2105.07603)
 * PySyft [[Github]](https://github.com/OpenMined/PySyft)
@@ -25,7 +25,7 @@
 * [FEDn](https://scaleoutsystems.github.io/fedn/) [[Github]](https://github.com/scaleoutsystems/fedn)
   * A modular and model agnostic framework for hierarchical federated machine learning [[Paper]](https://arxiv.org/abs/2103.00148)
   
-### Healthcare
+### ``Healthcare``
 
 * **The Future of Digital Health with Federated Learning** [[Paper]](https://www.nature.com/articles/s41746-020-00323-1)
   * General guide for FL in healthcare. Nice written paper.
@@ -53,6 +53,34 @@
 * Privacy-Preserving Deep Learning Computation for Geo-Distributed Medical Big-Data Platform [[Paper]](http://www.cs.ucf.edu/~mohaisen/doc/dsn19b.pdf)
 * Institutionally Distributed Deep Learning Networks [[Paper]](https://arxiv.org/abs/1709.05929)
 * Federated semi-supervised learning for COVID region segmentation in chest CT using multi-national data from China, Italy, Japan [[Paper]](https://www.sciencedirect.com/science/article/pii/S1361841521000384)
+- [Multi-Institutional Deep Learning Modeling Without Sharing Patient Data: A Feasibility Study on Brain Tumor Segmentation](https://arxiv.org/pdf/1810.04304.pdf)
+- [Federated Learning in Distributed Medical Databases: Meta-Analysis of Large-Scale Subcortical Brain Data](https://arxiv.org/pdf/1810.08553.pdf)
+- [Privacy-Preserving Technology to Help Millions of People: Federated Prediction Model for Stroke Prevention](https://arxiv.org/pdf/2006.10517.pdf)
+- [A Federated Learning Framework for Healthcare IoT devices](https://arxiv.org/pdf/2005.05083.pdf)
+Keywords: Split Learning + Sparsification
+- [Federated Transfer Learning for EEG Signal Classification](https://arxiv.org/pdf/2004.12321.pdf)
+- [The Future of Digital Health with Federated Learning](https://arxiv.org/pdf/2003.08119.pdf)
+- [Anonymizing Data for Privacy-Preserving Federated Learning. ECAI 2020.](https://arxiv.org/pdf/2002.09096.pdf)
+- [Federated machine learning with Anonymous Random Hybridization (FeARH) on medical records](https://arxiv.org/pdf/2001.09751.pdf)
+- [Stratified cross-validation for unbiased and privacy-preserving federated learning](https://arxiv.org/pdf/2001.08090.pdf)
+- [Multi-site fMRI Analysis Using Privacy-preserving Federated Learning and Domain Adaptation: ABIDE Results](https://arxiv.org/pdf/2001.05647.pdf)
+- [Learn Electronic Health Records by Fully Decentralized Federated Learning](https://arxiv.org/pdf/1912.01792.pdf)
+- [Preserving Patient Privacy while Training a Predictive Model of In-hospital Mortality](https://arxiv.org/pdf/1912.00354.pdf)
+- [Federated Learning for Healthcare Informatics](https://arxiv.org/pdf/1911.06270.pdf)
+- [Federated and Differentially Private Learning for Electronic Health Records](https://arxiv.org/pdf/1911.05861.pdf)
+- [A blockchain-orchestrated Federated Learning architecture for healthcare consortia](https://arxiv.org/pdf/1910.12603.pdf)
+- [Federated Uncertainty-Aware Learning for Distributed Hospital EHR Data](https://arxiv.org/pdf/1910.12191.pdf)
+- [Stochastic Channel-Based Federated Learning for Medical Data Privacy Preserving](https://arxiv.org/pdf/1910.11160.pdf)
+- [Differential Privacy-enabled Federated Learning for Sensitive Health Data](https://arxiv.org/pdf/1910.02578.pdf)
+- [LoAdaBoost: Loss-based AdaBoost federated machine learning with reduced computational complexity on IID and non-IID intensive care data](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0230706)
+- [Privacy Preserving Stochastic Channel-Based Federated Learning with Neural Network Pruning](https://arxiv.org/pdf/1910.02115.pdf)
+- [Confederated Machine Learning on Horizontally and Vertically Separated Medical Data for Large-Scale Health System Intelligence](https://arxiv.org/pdf/1910.02109.pdf)
+- [Privacy-preserving Federated Brain Tumour Segmentation](https://arxiv.org/pdf/1910.00962.pdf)
+- [HHHFL: Hierarchical Heterogeneous Horizontal Federated Learning for Electroencephalography](https://arxiv.org/pdf/1909.05784.pdf)
+- [FedHealth: A Federated Transfer Learning Framework for Wearable Healthcare](https://arxiv.org/pdf/1907.09173.pdf)
+- [Patient Clustering Improves Efficiency of Federated Machine Learning to predict mortality and hospital stay time using distributed Electronic Medical Records](https://arxiv.org/pdf/1903.09296.pdf)
+- [LoAdaBoost:Loss-Based AdaBoost Federated Machine Learning on medical Data](https://arxiv.org/pdf/1811.12629.pdf)
+- [FADL:Federated-Autonomous Deep Learning for Distributed Electronic Health Record](https://arxiv.org/pdf/1811.11400.pdf)
 
 ### ```related papers```
 
