@@ -1,5 +1,5 @@
 # thesis
-### ```status: Confused about what I am doing still```
+### ```status: Confused about what I am doing```
 ### ``TOC``
 - [related papers](#related-papers)
 - [github resources](#github-resources)
