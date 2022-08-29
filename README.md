@@ -12,6 +12,7 @@
 
 ### ``Frameworks``
 
+* [top7-open-source-frameworks-for-federated-learning](https://www.apheris.com/blog-top7-open-source-frameworks-for-federated-learning#tff)
 * EasyFL [[Github]](https://github.com/EasyFL-AI/EasyFL) [[Paper]](https://arxiv.org/abs/2105.07603)
 * PySyft [[Github]](https://github.com/OpenMined/PySyft)
   * A Generic Framework for Privacy Preserving Peep Pearning [[Paper]](https://arxiv.org/abs/1811.04017)
