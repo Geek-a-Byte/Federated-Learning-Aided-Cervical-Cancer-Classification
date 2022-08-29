@@ -10,6 +10,21 @@
 
 ### ```github resources```
 
+### Frameworks
+
+* EasyFL [[Github]](https://github.com/EasyFL-AI/EasyFL) [[Paper]](https://arxiv.org/abs/2105.07603)
+* PySyft [[Github]](https://github.com/OpenMined/PySyft)
+  * A Generic Framework for Privacy Preserving Peep Pearning [[Paper]](https://arxiv.org/abs/1811.04017)
+* Tensorflow Federated [[Web]](https://www.tensorflow.org/federated)
+* FATE [[Github]](https://github.com/FederatedAI/FATE)
+* FedLearner [[Github]](https://github.com/bytedance/fedlearner) ByteDance
+* Baidu PaddleFL [[Github]](https://github.com/PaddlePaddle/PaddleFL)
+* Nvidia Clara SDK [[Web]](https://developer.nvidia.com/clara)
+* [Flower.dev](https://flower.dev/)
+* [OpenFL](https://github.com/intel/openfl)
+* [FEDn](https://scaleoutsystems.github.io/fedn/) [[Github]](https://github.com/scaleoutsystems/fedn)
+  * A modular and model agnostic framework for hierarchical federated machine learning [[Paper]](https://arxiv.org/abs/2103.00148)
+  
 ### Healthcare
 
 * **The Future of Digital Health with Federated Learning** [[Paper]](https://www.nature.com/articles/s41746-020-00323-1)
