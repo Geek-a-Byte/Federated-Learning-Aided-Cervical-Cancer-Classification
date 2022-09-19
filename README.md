@@ -1,9 +1,5 @@
-# thesis
-### ```status: Confused about what I am doing```
-
 ### get started
 - https://www.tensorflow.org/federated/get_started
-- 
 
 ### ``TOC``
 - [related papers](#related-papers)
