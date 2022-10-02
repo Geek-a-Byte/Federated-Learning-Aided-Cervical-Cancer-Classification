@@ -10,6 +10,14 @@
 - [SO](#stackoverflow)
 
 ### ```github resources```
+- https://github.com/AshwinRJ/Federated-Learning-PyTorch
+- https://blog.openmined.org/federated-learning-additive-secret-sharing-pysyft/
+- https://towardsdatascience.com/federated-learning-3097547f8ca3
+- https://developers.sherpa.ai/tutorials/federated-learning-paradigms/ftl
+- https://towardsdatascience.com/preserving-data-privacy-in-deep-learning-part-1-a04894f78029
+- https://learnopencv.com/federated-learning-using-pytorch-and-pysyft/
+- https://github.com/cantonioupao/cervical_cancer_detection
+
 
 ### ``Frameworks``
 
