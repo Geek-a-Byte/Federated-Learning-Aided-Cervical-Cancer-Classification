@@ -23,7 +23,8 @@
 - https://developers.sherpa.ai/tutorials/federated-learning-paradigms/ftl
 - https://towardsdatascience.com/preserving-data-privacy-in-deep-learning-part-1-a04894f78029
 - https://learnopencv.com/federated-learning-using-pytorch-and-pysyft/
-- https://github.com/cantonioupao/cervical_cancer_detection
+- https://github.com/cantonioupao/cervical_cancer_detection'
+- https://github.com/Koukyosyumei/AIJack
 
 
 ### ``Frameworks``
