@@ -25,7 +25,8 @@
 - https://learnopencv.com/federated-learning-using-pytorch-and-pysyft/
 - https://github.com/cantonioupao/cervical_cancer_detection'
 - https://github.com/Koukyosyumei/AIJack
-- https://medium.com/geekculture/why-i-stopped-using-jupyter-notebook-and-why-you-should-too-f5a3b00e90a6
+- https://medium.com/geekculture/why-i-stopped-using-jupyter-notebook-and-why-you-should-too-f5a3b00e90a
+- https://github.com/Yangfan-Jiang/Federated-Learning-with-Differential-Privacy
 
 
 ### ``Frameworks``
