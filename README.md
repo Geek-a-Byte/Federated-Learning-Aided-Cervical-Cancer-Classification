@@ -1,7 +1,6 @@
 ### ```Get Started```
 - https://www.tensorflow.org/federated/get_started
 - https://github.com/OpenMined/PySyft/tree/syft_0.2.x/examples/tutorials
-- https://github.com/ArturoDiez/FederatedLearning-Cancer-Image-Classification
 - https://flower.dev/docs/index.html
 
 ### ``TOC``
@@ -30,7 +29,7 @@
 - https://github.com/Koukyosyumei/AIJack
 - https://medium.com/geekculture/why-i-stopped-using-jupyter-notebook-and-why-you-should-too-f5a3b00e90a
 - https://github.com/Yangfan-Jiang/Federated-Learning-with-Differential-Privacy
-
+- https://github.com/ArturoDiez/FederatedLearning-Cancer-Image-Classification
 
 ### ``Frameworks``
 
