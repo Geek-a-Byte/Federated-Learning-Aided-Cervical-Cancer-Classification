@@ -1,4 +1,4 @@
-### get started
+### ```Get Started```
 - https://www.tensorflow.org/federated/get_started
 - https://github.com/OpenMined/PySyft/tree/syft_0.2.x/examples/tutorials
 - https://github.com/ArturoDiez/FederatedLearning-Cancer-Image-Classification
