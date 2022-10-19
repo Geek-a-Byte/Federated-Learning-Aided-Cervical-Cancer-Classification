@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/59027621/196595016-8b15bb5f-bf11-4ebb-83af-3440a65209c9.png)
+
+
 ### ```Get Started```
 - https://www.tensorflow.org/federated/get_started
 - https://github.com/OpenMined/PySyft/tree/syft_0.2.x/examples/tutorials
