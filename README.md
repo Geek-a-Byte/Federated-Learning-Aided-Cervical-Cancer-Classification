@@ -15,6 +15,7 @@
 - [SO](#stackoverflow)
 
 ### ```github resources```
+- https://github.com/WwZzz/easyFL/blob/main/algorithm/README.md#refer-anchor-1
 - https://github.com/Yangfan-Jiang/Federated-Learning-with-Differential-Privacy
 - https://github.com/AshwinRJ/Federated-Learning-PyTorch
 - https://blog.openmined.org/federated-learning-additive-secret-sharing-pysyft/
