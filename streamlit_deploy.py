@@ -42,7 +42,7 @@ scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/au
 # Assign credentials ann path of style sheet
 # creds = ServiceAccountCredentials.from_json_keyfile_name("/content/thesis-367714-64137e9747ad.json", scope)
 # Create a connection object.
-creds = service_account.Credentials.from_service_account_info(
+creds = ServiceAccountCredentials.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"],
     scopes=[
         "https://www.googleapis.com/auth/spreadsheets",
