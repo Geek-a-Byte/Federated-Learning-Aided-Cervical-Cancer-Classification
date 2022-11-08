@@ -185,7 +185,8 @@ if app_mode=='Home':
     st.write('the name is ', name) 
     if(os.path.isdir('/content/content/Client_'+name)==True):
           shutil.rmtree('/content/content/Client_'+name)
-          uploaded_file = st.file_uploader("Choose a file",type="zip")
+    
+    uploaded_file = st.file_uploader("Choose a file",type="zip")
     if uploaded_file is not None:
       with zipfile.ZipFile(uploaded_file, "r") as z:
         z.extractall(".")
