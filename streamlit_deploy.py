@@ -190,12 +190,12 @@ if app_mode=='Home':
 #       Archive("'"+uploaded_file+"'").extractall('.')
 	# iterate over each file uploaded
     for file in file_uploaded:
-	if file is not None:
-	   if file.endswith(".zip"):
-	      with zipfile.ZipFile(file_uploaded,"r") as z:
-		 z.extractall(".")
-	   else:
-            # the part of your code which deals with img extensions
+      if file is not None:
+        if file.endswith(".zip"):
+          with zipfile.ZipFile(file_uploaded,"r") as z:
+	     z.extractall(".")
+        else:
+    # the part of your code which deals with img extensions
       # To convert to a string based IO:
       # stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
 
