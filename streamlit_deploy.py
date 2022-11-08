@@ -185,11 +185,16 @@ if app_mode=='Home':
     st.write('the name is ', name) 
     if(os.path.isdir('/content/content/Client_'+name)==True):
           shutil.rmtree('/content/content/Client_'+name)
-    file_uploaded = st.file_uploader("Choose a file",type="zip")
-    for file in file_uploaded:
-      if file is not None:
-          with zipfile.ZipFile(file_uploaded,"r") as z:
-           z.extractall(".")    
+      if uploaded_file is not None:
+      	with zipfile.ZipFile(uploaded_file, "r") as z:
+         z.extractall(".")
+   
+#       To convert to a string based IO:
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+
+#       To read file as string:
+    string_data = stringio.read()  
+    st.write(string_data)
     
     #adding a button
     col1, col2, col3 = st.columns([1,1,1])
