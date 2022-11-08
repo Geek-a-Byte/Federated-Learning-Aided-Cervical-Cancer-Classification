@@ -2,3 +2,4 @@ gspread
 oauth2client
 tensorflow
 matplotlib
+cv2
