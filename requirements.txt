@@ -2,4 +2,4 @@ gspread
 oauth2client
 tensorflow
 matplotlib
-opencv-python
+opencv-python-headless
