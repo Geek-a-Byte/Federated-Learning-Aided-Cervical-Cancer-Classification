@@ -187,7 +187,7 @@ if app_mode=='Home':
           shutil.rmtree('/content/content/Client_'+name)
     uploaded_file = st.file_uploader("Choose a file",type="zip")
     if uploaded_file is not None:
-      Archive(uploaded_file).extractall('.')
+      Archive("'"+uploaded_file+"'").extractall('.')
    
       # To convert to a string based IO:
       # stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
