@@ -193,7 +193,7 @@ if app_mode=='Home':
       if file is not None:
         if file.endswith(".zip"):
           with zipfile.ZipFile(file_uploaded,"r") as z:
-	     z.extractall(".")
+	    z.extractall(".")
         else:
     # the part of your code which deals with img extensions
       # To convert to a string based IO:
