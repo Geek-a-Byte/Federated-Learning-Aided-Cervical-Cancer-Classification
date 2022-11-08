@@ -185,10 +185,17 @@ if app_mode=='Home':
     st.write('the name is ', name) 
     if(os.path.isdir('/content/content/Client_'+name)==True):
           shutil.rmtree('/content/content/Client_'+name)
-    uploaded_file = st.file_uploader("Choose a file",type="zip")
-    if uploaded_file is not None:
-      Archive("'"+uploaded_file+"'").extractall('.')
-   
+    file_uploaded = st.file_uploader("Choose a file",type="zip")
+#     if uploaded_file is not None:
+#       Archive("'"+uploaded_file+"'").extractall('.')
+	# iterate over each file uploaded
+    for file in file_uploaded:
+	if file is not None:
+	   if file.endswith(".zip"):
+	      with zipfile.ZipFile(file_uploaded,"r") as z:
+		 z.extractall(".")
+	   else:
+            # the part of your code which deals with img extensions
       # To convert to a string based IO:
       # stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
 
