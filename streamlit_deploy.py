@@ -1,5 +1,6 @@
 # Import required modules
 import gspread
+from google.oauth2 import service_account
 from oauth2client.service_account import ServiceAccountCredentials
 from pprint import pprint
 
@@ -42,7 +43,7 @@ scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/au
 # Assign credentials ann path of style sheet
 # creds = ServiceAccountCredentials.from_json_keyfile_name("/content/thesis-367714-64137e9747ad.json", scope)
 # Create a connection object.
-creds = ServiceAccountCredentials.Credentials.from_service_account_info(
+creds = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"],
     scopes=[
         "https://www.googleapis.com/auth/spreadsheets",
