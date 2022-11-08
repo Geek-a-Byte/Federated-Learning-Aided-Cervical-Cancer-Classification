@@ -6,3 +6,4 @@ opencv-python-headless
 imutils
 scikit-learn
 patool
+pyunpack
