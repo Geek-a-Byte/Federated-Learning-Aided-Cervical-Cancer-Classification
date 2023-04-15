@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/59027621/196595016-8b15bb5f-bf11-4ebb-83af-3440a65209c9.png)
+![image](https://github.com/Geek-a-Byte/thesis/blob/main/defence/book/figures/frontend1.png)
 https://github.com/Rohit-Kundu/Two-Step-Feature-Enhancement
 
 ### ```Get Started```
