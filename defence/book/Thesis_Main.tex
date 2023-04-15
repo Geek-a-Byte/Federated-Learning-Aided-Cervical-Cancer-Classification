@@ -1,0 +1,969 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template of MIST Thesis 
+% Version 3.6 Date 27-03-2022
+% Email: h.nyeem@eece.mist.ac.bd 
+% -----------------------------------------------------
+% This LaTeX template was originally developed by Lt Col Hussain Md Abu Nyeem, PhD, EME for the MSc Thesis students of the Military Institute of Science and Technology (MIST). The sucessive developments received updates with the specific policy and guidelines of MIST with a notable contribution of Major Md Abdul Wahed.
+%
+% This version quickly attempts for the first time to capture the prescribed format of the undergrad and postgrad theses of MIST students. This means that there would be surely some bugs and rooms for improvement.
+%
+% The main objective of this template is to fascilitate the existing BSc/MSc/PhD Students of MIST to easily typeset their thesis content. This means that once the input-data of the title page are given, most of the sections of the front- and back-matters will be generated automatically.
+%
+% Please send us the email for further development of this template
+
+%------------------------------------------------------
+%HOW TO USE (A Brief Guideline for the Beginner)
+%------------------------------------------------------
+%1. Input the data for the fornt matters starting lines from: 296 
+%
+%2. Images are to be copied in the FIGURE folder
+%
+%3. Update the Chapters in the CHAPTERS folder with the desired content
+%
+%4. Typesetting of abstract in Bengali is not yet supported by this version. However, a pre-typeset Bengali-abstract (written with avro in word or google doc, and saved as pdf) can be included in the abstract section.
+%
+%5. Update the ACKNOWLEDGEMENT, ABSTRACT, ABBREVIATIONS, SYMBOLS, ListOfPublication, and INDEX files in the CHAPTERS folder as well. Other pages of the front- and back-matters will be generated automatically.
+%
+%6. Reference files (bibtex files) are to be stored in the main dirctory where this file resides and the name of the bibtex file should be included in the \bibliography{FILENAME} in the REFERENCE section at the end of this document. Or, you may use/update the bibliographies in the current MyReference.bib file without further changes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfoptionpdfminorversion=5
+%\RequirePackage{pdf14}
+\documentclass[final,print]{packages/mistthesis} 
+%%% REFFF
+\usepackage[english]{babel}
+\usepackage[labelformat=simple]{subcaption}    %%Adding option to remove parenthesis
+\renewcommand{\thesubfigure}{\normalsize Figure \thefigure. (\alph{subfigure}):}
+\usepackage[utf8x]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%% this makes the citation format correct
+% \usepackage{natbib}
+% \usepackage{fancyhd}
+% \bibliographystyle{agsm}
+\usepackage{apacite}
+\AtBeginDocument{\renewcommand{\url}[1]{\relax}}
+\pdfminorversion=6
+\usepackage{times}
+%\usepackage{mathpazo}
+\usepackage{notoccite}
+\usepackage{mfirstuc}
+%include the preposition and conjunction used in your thesis title
+\MFUnocap{the}\MFUnocap{and}\MFUnocap{in}\MFUnocap{on}
+\MFUnocap{of}\MFUnocap{for}\MFUnocap{to}\MFUnocap{based}
+\MFUnocap{a}\MFUnocap{an}
+%\MFUnocap{to}\MFUnocap{based}
+
+\usepackage{emptypage} 
+%\renewcommand{\sfdefault}{\rmdefault}
+%\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{afterpage}
+\newcommand\blankpage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+%\usepackage[tight,footnotesize, caption=false]{subfigure}
+\usepackage{authblk}
+
+%\usepackage{natbib}
+%\usepackage[utf8x]{inputenc}
+
+
+\usepackage[tight,footnotesize]{subfigure}
+%\usepackage[caption=false]{subfig}
+%\usepackage[chapter]{algorithm}
+%\usepackage{algorithmic, eqparbox} %algpseudocode,algorithmicx, algpseudocode,
+\renewcommand{\bibname}{REFERENCES}
+
+
+\usepackage[lq]{packages/mygraphicx}
+%\usepackage[toc,page]{appendix}
+%\usepackage{epstopdf, url}
+\usepackage{ragged2e}
+%\usepackage[banglamainfont=Kalpurush, banglattfont=Siyam Rupali]{latexbangla}
+
+%Table package
+\usepackage{tabularx, threeparttable, longtable, float, multirow, array, pdflscape, afterpage, paralist}
+\makeatletter
+\def\true@true@true{\fi\fi\iftrue\iftrue\iftrue}
+\makeatother
+\usepackage[final]{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{changepage, calc,  enumitem, linegoal, datetime}
+\setlist[itemize]{itemsep=0cm}
+\usepackage[hang, bf, small]{caption}
+\captionsetup[figure]{font=small,skip=6pt}
+%\usepackage{newtxtext,newtxmath}
+
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{label = \emph{Step} \arabic*:}
+% patch def of algorithmic environment
+
+\usepackage{booktabs, makecell}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+%this is for algorithmic environment
+\usepackage{mathrsfs}
+\usepackage[cmex10]{amsmath}\allowdisplaybreaks
+
+%\usepackage{ breqn, array, amssymb, mathptmx, mathtools, mdwmath, mdwtab, bigints}
+\usepackage{amsfonts,  amssymb, array,  mathptmx, mathtools, mdwmath, mdwtab, bigints, amssymb, amsthm, eqparbox}
+%\usepackage[T1]{fontenc}
+%\usepackage[chapter]{algorithm}
+%\usepackage{algorithmicx,algpseudocode, eqparbox}
+%\floatname{algorithm}{Model}
+%\usepackage{algorithm, algorithmicx, algpseudocode, eqparbox, color}
+\makeatletter\let\MPtrue\@minipagetrue\makeatother
+\usepackage{algorithm, algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\def\STATEX#1{{\def\alglinenumber##1{}\STATE #1}\addtocounter{ALG@line}{-1}}
+%
+\newcommand{\func}[1]{\ensuremath{{#1}\left(\cdot\right)}}
+\newcommand{\funcc}[2]{\ensuremath{{#1}\left({#2}\right)}}
+%\newcommand{\funcc}[2]{\ensuremath{\texttt{#1}\left(#2\right)}}	
+%\newcommand{\func}[1]{\ensuremath{{#1}\left(\cdot\right)}}
+\newcommand\Input{\Statex\hspace*{-\algorithmicindent}\textbf{Input(s):~}}
+%newcommand for output
+\newcommand\Output{\Statex\hspace*{-\algorithmicindent}\textbf{Output(s):~}}
+
+%----------------------------
+%\usepackage{epstopdf}
+%\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+%\AppendGraphicsExtensions{.tif}
+\newcommand{\footlabel}[2]{%
+	\addtocounter{footnote}{1}%
+	\footnotetext[\thefootnote]{%
+		\addtocounter{footnote}{-1}%
+		\refstepcounter{footnote}\label{#1} #2}$^{\ref{#1}}$}
+
+% \newcommand{\footref}[1]{$^{\ref{#1}}$}
+\usepackage{etex}
+\usepackage{comment}
+
+
+\makeatletter\let\MPtrue\@minipagetrue\makeatother
+%this is for hypothesis, remark and definition
+\newtheorem{hypothesis}{Hypothesis}[chapter]
+%\newtheorem{remark}{Remark}[chapter]
+\newtheorem{state}{Statement}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+%\usepackage{graphicx}
+\graphicspath{{./figures/}}
+
+%\renewcommand{\chaptername}{CHAPTER}
+%\usepackage[pdfborder=000]{hyperref}
+\def\dotsign{\xleaders\hbox to .2em{\d{}}\hfill\d{}}
+\def\dashsign{\xleaders\hbox to .5em{\_}\hfill\_}
+\usepackage{hyphenat}
+%\def\hyp{-\penalty0\hskip0pt\relax}
+\def\hypp{--\penalty0\hskip0pt\relax}					
+
+
+
+\usepackage{xcolor}
+% \hypersetup{
+% 	pageanchor	=	false,
+% 	colorlinks  = true, %Colours links instead of ugly boxes
+% 	urlcolor    = black, %blue!30!black, %Colour for external hyperlinks
+% 	linkcolor   = black, %red!30!black, %Colour of internal links
+% 	citecolor   = black, %red!30!black %Colour of citations
+% }
+%using minipage environment in table
+\makeatletter\let\MPtrue\@minipagetrue\makeatother
+\newcommand{\figref}[2][{}]{\hyperref[#2]{\figurename~\ref{#2}#1}} 
+\newcommand{\tabref}[2][{}]{\hyperref[#2]{\tablename~\ref{#2}#1}} 
+
+%using symbols from other package without using them
+\DeclareSymbolFont{symbolsC}{U}{txsyc}{m}{n}
+\DeclareMathSymbol{\nthickapprox}{\mathrel}{symbolsC}{"35}
+\DeclareMathSymbol{\napprox}{\mathrel}{symbolsC}{"30}
+
+%this is for new rule command for chapter abstract
+\newcommand*\varhrulefill[1][0em]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+\newcommand{\raisedrule}[2][0.1em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+
+%\usepackage{chngcntr} 
+\usepackage{titletoc}
+\usepackage[toc]{appendix}
+\usepackage{xpatch}
+
+\xpatchcmd{\addappheadtotoc}{%
+	\appendixtocname}{%
+	\texorpdfstring{\MakeUppercase{\appendixtocname}}{}}{}{}
+
+
+%\renewcommand\thechapter{\MakeUppercase{\Alph{chapter}}}
+%\texorpdfstring{\MakeUppercase{\thechapter}}{}
+% load package with ``framed'' and ``numbered'' option.
+\usepackage{listings}
+\usepackage{color}
+\definecolor{G}{rgb}{0.8,0.8,0.8}
+\usepackage[framed, numbered, autolinebreaks, useliterate]{mcode}
+\lstset{  
+	backgroundcolor=\color{white},
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=10pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{G},
+	rulecolor=\color{G}
+}
+
+
+%\makeatletter
+%\renewcommand{\appendixname}{APPENDIX}
+%\renewcommand{\chaptername}{CHAPTER}
+%\def\@@makechapterhead#1{\uppercase{\@chapapp~\thechapter. #1}}
+%\makeatother
+
+%for customized spacing
+%--------------------------------------
+%\titleformat{wrap}
+\usepackage[section]{placeins}
+%discourage floats from getting their own page
+\renewcommand\floatpagefraction{.92}
+\renewcommand\topfraction{.92}
+\renewcommand\bottomfraction{.92}
+
+\usepackage{graphicx, pgfplots}
+\pgfplotsset{grid style={dashed,gray}}
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+
+
+\usepackage{hyphenat}
+\usepackage{rotating}
+\sloppy
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@afterheading}%
+{\clubpenalty \@M}{\clubpenalties 3 \@M \@M 0}{}{}
+\patchcmd{\@afterheading}%
+{\clubpenalty \@clubpenalty}{\clubpenalties 2 \@clubpenalty 0}{}{}
+\makeatother
+\appto\TPTnoteSettings{\footnotesize}
+
+\AtBeginEnvironment{algorithmic}{\small}	
+\usepackage{xpatch}
+
+
+%\usepackage{setspace}
+\usepackage{setspace, sectsty}
+\usepackage[nonindentfirst, bottomtitles, compact, raggedright]{titlesec}
+\setdisplayskipstretch{0.5}
+%\topskip=-20pt
+\parskip=12pt
+\parindent=0pt
+%\baselineskip=15pt
+\titleformat{\chapter}[display]
+{\large \bfseries \centering}{\chaptertitlename\ \thechapter}{0pt}{\large}
+\titlespacing*{\chapter}{-10pt}{-20pt}{25pt}
+\titlespacing{\section}{0pt}{0.1\parskip}{-0.7\parskip}
+\titlespacing{\subsection}{0pt}{0.15\parskip}{-0.7\parskip}
+\titlespacing{\subsubsection}{0pt}{0.35\parskip}{-0.7\parskip}
+\allsectionsfont{\singlespacing}
+%\chapterfont{\centering\fontsize{14}{16}\selectfont}
+\titleformat{\section}{\fontsize{14}{14}\selectfont\bfseries}{\thesection}{1.2em}{}
+\titleformat{\subsection}{\fontsize{12}{12}\selectfont\bfseries}{\thesubsection}{1.2em}{}
+\titleformat{\subsubsection}{\fontsize{12}{12}\selectfont\bfseries}{\thesubsubsection}{1.2em}{}
+%\sectionfont{\fontsize{10}{10}\selectfont}
+%\subsectionfont{\fontsize{12}{12}\selectfont}
+%\subsubsectionfont{\fontsize{10}{10}\selectfont}
+
+%\titlespacing*{\section} {0pt}{.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection} {0pt}{.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph} {0pt}{.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\section}
+%{\normalfont}{\thesection}{1em}{{#1}}
+%\newcommand{\cchapter}[1]{\chapter[#1]{\centering #1}}
+%\titleformat{\section}{\normalfont}{\thesection}{1em}{\MakeUppercase{#1}}
+
+
+
+\makeatletter
+\xpatchcmd{\algorithmic}{\itemsep\z@}{\itemsep=0.4ex plus1pt}{}{}
+\makeatother
+%
+\makeatletter
+\newcommand\fs@betterruled{%
+	\def\@fs@cfont{\bfseries}\let\@fs@capt\floatc@ruled
+	\def\@fs@pre{\vspace*{8pt}\hrule height.8pt depth0pt \kern2pt}%
+	\def\@fs@post{\kern2pt\hrule\relax}%
+	\def\@fs@mid{\kern2pt\hrule\kern2pt}%
+	\let\@fs@iftopcapt\iftrue}
+\floatstyle{betterruled}
+\restylefloat{algorithm}
+\makeatother
+
+\usepackage{pdflscape}
+\usepackage{breqn}
+
+\usepackage[subfigure, titles]{tocloft}
+\newlength\mylength
+\settowidth\mylength{0.0001\cftfigpresnum\cftfigaftersnum}
+\renewcommand\cftfigpresnum{\figurename~}
+\renewcommand\cftfigaftersnum{:}
+\addtolength\cftfignumwidth{\mylength}
+% 
+\renewcommand\cfttabpresnum{\tablename~}
+\renewcommand\cfttabaftersnum{:}
+\settowidth\mylength{\cfttabpresnum\cfttabaftersnum}
+\addtolength\cfttabnumwidth{\mylength}
+
+\AtBeginEnvironment{equation}{\leavevmode\singlespace}
+\AfterEndEnvironment{equation}{\endsinglespace\vskip0.5\baselineskip\noindent\ignorespaces}
+
+\pdfminorversion=3
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template of MIST Thesis 
+% Version 3.6 Date 27-03-2022
+% Email: h.nyeem@eece.mist.ac.bd 
+% -----------------------------------------------------
+% This LaTeX template was originally developed by Lt Col Hussain Md Abu Nyeem, PhD, EME for the MSc Thesis students of the Military Institute of Science and Technology (MIST). The sucessive developments received updates with the specific policy and guidelines of MIST with a notable contribution of Major Md Abdul Wahed.
+%
+% This version quickly attempts for the first time to capture the prescribed format of the undergrad and postgrad theses of MIST students. This means that there would be surely some bugs and rooms for improvement.
+%
+% The main objective of this template is to fascilitate the existing BSc/MSc/PhD Students of MIST to easily typeset their thesis content. This means that once the input-data of the title page are given, most of the sections of the front- and back-matters will be generated automatically.
+%
+% Please send us the email for further development of this template
+
+%------------------------------------------------------
+%HOW TO USE (A Brief Guideline for the Beginner)
+%------------------------------------------------------
+%1. Input the data for the fornt matters starting lines from: 296 
+%
+%2. Images are to be copied in the FIGURE folder
+%
+%3. Update the Chapters in the CHAPTERS folder with the desired content
+%
+%4. Typesetting of abstract in Bengali is not yet supported by this version. However, a pre-typeset Bengali-abstract (written with avro in word or google doc, and saved as pdf) can be included in the abstract section.
+%
+%5. Update the ACKNOWLEDGEMENT, ABSTRACT, ABBREVIATIONS, SYMBOLS, ListOfPublication, and INDEX files in the CHAPTERS folder as well. Other pages of the front- and back-matters will be generated automatically.
+%
+%6. Reference files (bibtex files) are to be stored in the main dirctory where this file resides and the name of the bibtex file should be included in the \bibliography{FILENAME} in the REFERENCE section at the end of this document. Or, you may use/update the bibliographies in the current MyReference.bib file without further changes.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pdfoptionpdfminorversion=5
+
+% %\RequirePackage{pdf14}
+% \documentclass[final,print]{packages/mistthesis} 
+% %%% REFFF
+% \usepackage{fontspec}
+% \usepackage{setspace}% http://ctan.org/pkg/setspace
+% \newfontface{\bn}{kalpurush.ttf}
+% \usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+
+% \usepackage{apacite}
+% \AtBeginDocument{\renewcommand{\url}[1]{\relax}}
+% % \pdfminorversion=6
+% \usepackage{times}
+% %\usepackage{mathpazo}
+% \usepackage{notoccite}
+% \usepackage{mfirstuc}
+% %include the preposition and conjunction used in your thesis title
+% \MFUnocap{the}\MFUnocap{and}\MFUnocap{in}\MFUnocap{on}
+% \MFUnocap{of}\MFUnocap{for}\MFUnocap{to}\MFUnocap{based}
+% \MFUnocap{a}\MFUnocap{an}
+% %\MFUnocap{to}\MFUnocap{based}
+
+% \usepackage{emptypage} 
+% %\renewcommand{\sfdefault}{\rmdefault}
+% %\usepackage{pdflscape}
+% \usepackage{rotating}
+% \usepackage{afterpage}
+% \newcommand\blankpage{
+% 	\null
+% 	\thispagestyle{empty}
+% 	\addtocounter{page}{-1}
+% 	\newpage
+% }
+% %\usepackage[tight,footnotesize, caption=false]{subfigure}
+% \usepackage{authblk}
+
+% %\usepackage{natbib}
+% %\usepackage[utf8x]{inputenc}
+
+
+% \usepackage[tight,footnotesize]{subfigure}
+% %\usepackage[caption=false]{subfig}
+% %\usepackage[chapter]{algorithm}
+% %\usepackage{algorithmic, eqparbox} %algpseudocode,algorithmicx, algpseudocode,
+% \renewcommand{\bibname}{REFERENCES}
+
+
+% \usepackage[lq]{packages/mygraphicx}
+% %\usepackage[toc,page]{appendix}
+% %\usepackage{epstopdf, url}
+% \usepackage{ragged2e}
+% %\usepackage[banglamainfont=Kalpurush, banglattfont=Siyam Rupali]{latexbangla}
+% % adding fontspec pkg and kalpurush font
+
+% %Table package
+% \usepackage{tabularx, threeparttable, longtable, float, multirow, array, pdflscape, afterpage, paralist}
+% \makeatletter
+% \def\true@true@true{\fi\fi\iftrue\iftrue\iftrue}
+% \makeatother
+% \usepackage[final]{pdfpages}
+% \usepackage{fancyhdr}
+% \usepackage{changepage, calc,  enumitem, linegoal, datetime}
+% \setlist[itemize]{itemsep=0cm}
+% \usepackage[hang, bf, small]{caption}
+% \captionsetup[figure]{font=small,skip=6pt}
+% %\usepackage{newtxtext,newtxmath}
+
+% \newlist{steps}{enumerate}{1}
+% \setlist[steps, 1]{label = \emph{Step} \arabic*:}
+% % patch def of algorithmic environment
+
+% \usepackage{booktabs, makecell}% http://ctan.org/pkg/booktabs
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% %this is for algorithmic environment
+% \usepackage{mathrsfs}
+% \usepackage[cmex10]{amsmath}\allowdisplaybreaks
+
+% %\usepackage{ breqn, array, amssymb, mathptmx, mathtools, mdwmath, mdwtab, bigints}
+% \usepackage{amsfonts,  amssymb, array,  mathptmx, mathtools, mdwmath, mdwtab, bigints, amssymb, amsthm, eqparbox}
+% %\usepackage[T1]{fontenc}
+% %\usepackage[chapter]{algorithm}
+% %\usepackage{algorithmicx,algpseudocode, eqparbox}
+% %\floatname{algorithm}{Model}
+% %\usepackage{algorithm, algorithmicx, algpseudocode, eqparbox, color}
+% \makeatletter\let\MPtrue\@minipagetrue\makeatother
+% \usepackage{algorithm, algorithmic}
+% \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+% \renewcommand{\algorithmicensure}{\textbf{Output:}}
+% \def\STATEX#1{{\def\alglinenumber##1{}\STATE #1}\addtocounter{ALG@line}{-1}}
+% %
+% \newcommand{\func}[1]{\ensuremath{{#1}\left(\cdot\right)}}
+% \newcommand{\funcc}[2]{\ensuremath{{#1}\left({#2}\right)}}
+% %\newcommand{\funcc}[2]{\ensuremath{\texttt{#1}\left(#2\right)}}	
+% %\newcommand{\func}[1]{\ensuremath{{#1}\left(\cdot\right)}}
+% \newcommand\Input{\Statex\hspace*{-\algorithmicindent}\textbf{Input(s):~}}
+% %newcommand for output
+% \newcommand\Output{\Statex\hspace*{-\algorithmicindent}\textbf{Output(s):~}}
+
+% %----------------------------
+% %\usepackage{epstopdf}
+% %\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+% %\AppendGraphicsExtensions{.tif}
+% \newcommand{\footlabel}[2]{%
+% 	\addtocounter{footnote}{1}%
+% 	\footnotetext[\thefootnote]{%
+% 		\addtocounter{footnote}{-1}%
+% 		\refstepcounter{footnote}\label{#1} #2}$^{\ref{#1}}$}
+
+% % \newcommand{\footref}[1]{$^{\ref{#1}}$}
+% \usepackage{etex}
+% \usepackage{comment}
+
+
+% \makeatletter\let\MPtrue\@minipagetrue\makeatother
+% %this is for hypothesis, remark and definition
+% \newtheorem{hypothesis}{Hypothesis}[chapter]
+% %\newtheorem{remark}{Remark}[chapter]
+% \newtheorem{state}{Statement}[chapter]
+% \newtheorem{definition}{Definition}[chapter]
+% %\usepackage{graphicx}
+% \graphicspath{{./figures/}}
+
+% %\renewcommand{\chaptername}{CHAPTER}
+% %\usepackage[pdfborder=000]{hyperref}
+% \def\dotsign{\xleaders\hbox to .2em{\d{}}\hfill\d{}}
+% \def\dashsign{\xleaders\hbox to .5em{\_}\hfill\_}
+% \usepackage{hyphenat}
+% %\def\hyp{-\penalty0\hskip0pt\relax}
+% \def\hypp{--\penalty0\hskip0pt\relax}					
+
+
+
+% \usepackage{xcolor}
+% % \hypersetup{
+% % 	pageanchor	=	false,
+% % 	colorlinks  = true, %Colours links instead of ugly boxes
+% % 	urlcolor    = black, %blue!30!black, %Colour for external hyperlinks
+% % 	linkcolor   = black, %red!30!black, %Colour of internal links
+% % 	citecolor   = black, %red!30!black %Colour of citations
+% % }
+% %using minipage environment in table
+% \makeatletter\let\MPtrue\@minipagetrue\makeatother
+% \newcommand{\figref}[2][{}]{\hyperref[#2]{\figurename~\ref{#2}#1}} 
+% \newcommand{\tabref}[2][{}]{\hyperref[#2]{\tablename~\ref{#2}#1}} 
+
+% %using symbols from other package without using them
+% \DeclareSymbolFont{symbolsC}{U}{txsyc}{m}{n}
+% \DeclareMathSymbol{\nthickapprox}{\mathrel}{symbolsC}{"35}
+% \DeclareMathSymbol{\napprox}{\mathrel}{symbolsC}{"30}
+
+% %this is for new rule command for chapter abstract
+% \newcommand*\varhrulefill[1][0em]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+% \newcommand{\raisedrule}[2][0.1em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+
+% %\usepackage{chngcntr} 
+% \usepackage{titletoc}
+% \usepackage[toc]{appendix}
+% \usepackage{xpatch}
+
+% \xpatchcmd{\addappheadtotoc}{%
+% 	\appendixtocname}{%
+% 	\texorpdfstring{\MakeUppercase{\appendixtocname}}{}}{}{}
+
+
+% %\renewcommand\thechapter{\MakeUppercase{\Alph{chapter}}}
+% %\texorpdfstring{\MakeUppercase{\thechapter}}{}
+% % load package with ``framed'' and ``numbered'' option.
+% \usepackage{listings}
+% \usepackage{color}
+% \definecolor{G}{rgb}{0.8,0.8,0.8}
+% \usepackage[framed, numbered, autolinebreaks, useliterate]{mcode}
+% \lstset{  
+% 	backgroundcolor=\color{white},
+% 	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+% 	numbersep=10pt,                   % how far the line-numbers are from the code
+% 	numberstyle=\tiny\color{G},
+% 	rulecolor=\color{G}
+% }
+
+
+% %\makeatletter
+% %\renewcommand{\appendixname}{APPENDIX}
+% %\renewcommand{\chaptername}{CHAPTER}
+% %\def\@@makechapterhead#1{\uppercase{\@chapapp~\thechapter. #1}}
+% %\makeatother
+
+% %for customized spacing
+% %--------------------------------------
+% %\titleformat{wrap}
+% \usepackage[section]{placeins}
+% %discourage floats from getting their own page
+% \renewcommand\floatpagefraction{.92}
+% \renewcommand\topfraction{.92}
+% \renewcommand\bottomfraction{.92}
+
+% \usepackage{graphicx, pgfplots}
+% \pgfplotsset{grid style={dashed,gray}}
+% \pgfplotsset{compat=newest}
+% \pgfplotsset{plot coordinates/math parser=false}
+
+
+% \usepackage{hyphenat}
+% \usepackage{rotating}
+% \sloppy
+% \usepackage{etoolbox}
+% \makeatletter
+% \patchcmd{\@afterheading}%
+% {\clubpenalty \@M}{\clubpenalties 3 \@M \@M 0}{}{}
+% \patchcmd{\@afterheading}%
+% {\clubpenalty \@clubpenalty}{\clubpenalties 2 \@clubpenalty 0}{}{}
+% \makeatother
+% \appto\TPTnoteSettings{\footnotesize}
+
+% \AtBeginEnvironment{algorithmic}{\small}	
+% \usepackage{xpatch}
+
+
+% %\usepackage{setspace}
+% \usepackage{setspace, sectsty}
+% \usepackage[nonindentfirst, bottomtitles, compact, raggedright]{titlesec}
+% \setdisplayskipstretch{0.5}
+% %\topskip=-20pt
+% \parskip=12pt
+% \parindent=0pt
+% %\baselineskip=15pt
+% \titleformat{\chapter}[display]
+% {\large \bfseries \centering}{\chaptertitlename\ \thechapter}{0pt}{\large}
+% \titlespacing*{\chapter}{-10pt}{-20pt}{25pt}
+% \titlespacing{\section}{0pt}{0.1\parskip}{-0.7\parskip}
+% \titlespacing{\subsection}{0pt}{0.15\parskip}{-0.7\parskip}
+% \titlespacing{\subsubsection}{0pt}{0.35\parskip}{-0.7\parskip}
+% \allsectionsfont{\singlespacing}
+% %\chapterfont{\centering\fontsize{14}{16}\selectfont}
+% \titleformat{\section}{\fontsize{14}{14}\selectfont\bfseries}{\thesection}{1.2em}{}
+% \titleformat{\subsection}{\fontsize{12}{12}\selectfont\bfseries}{\thesubsection}{1.2em}{}
+% \titleformat{\subsubsection}{\fontsize{12}{12}\selectfont\bfseries}{\thesubsubsection}{1.2em}{}
+% %\sectionfont{\fontsize{10}{10}\selectfont}
+% %\subsectionfont{\fontsize{12}{12}\selectfont}
+% %\subsubsectionfont{\fontsize{10}{10}\selectfont}
+
+% %\titlespacing*{\section} {0pt}{.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+% %\titlespacing*{\subsection} {0pt}{.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% %\titlespacing*{\subsubsection}{0pt}{.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% %\titlespacing*{\paragraph} {0pt}{.25ex plus 1ex minus .2ex}{1em}
+% %\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+% %\titlespacing*{\section}
+% %{\normalfont}{\thesection}{1em}{{#1}}
+% %\newcommand{\cchapter}[1]{\chapter[#1]{\centering #1}}
+% %\titleformat{\section}{\normalfont}{\thesection}{1em}{\MakeUppercase{#1}}
+
+
+
+% \makeatletter
+% \xpatchcmd{\algorithmic}{\itemsep\z@}{\itemsep=0.4ex plus1pt}{}{}
+% \makeatother
+% %
+% \makeatletter
+% \newcommand\fs@betterruled{%
+% 	\def\@fs@cfont{\bfseries}\let\@fs@capt\floatc@ruled
+% 	\def\@fs@pre{\vspace*{8pt}\hrule height.8pt depth0pt \kern2pt}%
+% 	\def\@fs@post{\kern2pt\hrule\relax}%
+% 	\def\@fs@mid{\kern2pt\hrule\kern2pt}%
+% 	\let\@fs@iftopcapt\iftrue}
+% \floatstyle{betterruled}
+% \restylefloat{algorithm}
+% \makeatother
+
+% \usepackage{pdflscape}
+% \usepackage{breqn}
+
+% \usepackage[subfigure, titles]{tocloft}
+% \newlength\mylength
+% \settowidth\mylength{0.0001\cftfigpresnum\cftfigaftersnum}
+% \renewcommand\cftfigpresnum{\figurename~}
+% \renewcommand\cftfigaftersnum{:}
+% \addtolength\cftfignumwidth{\mylength}
+% % 
+% \renewcommand\cfttabpresnum{\tablename~}
+% \renewcommand\cfttabaftersnum{:}
+% \settowidth\mylength{\cfttabpresnum\cfttabaftersnum}
+% \addtolength\cfttabnumwidth{\mylength}
+
+% \AtBeginEnvironment{equation}{\leavevmode\singlespace}
+% \AfterEndEnvironment{equation}{\endsinglespace\vskip0.5\baselineskip\noindent\ignorespaces}
+
+% % \pdfminorversion=3
+% \renewcommand{\cftchapfont}{\normalfont}
+% \renewcommand{\cftchappagefont}{\normalfont}
+
+
+
+
+
+% \usepackage{algorithmicx}
+% \usepackage[ruled]{algorithm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%GIVE INPUT HERE FOR YOUR THESIS TITLE PAGE AND FRONT MATTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+% TITLE OF THE THESIS:
+% Write the title in initial captial format 
+% excluding that form for prepositions and conjuctions
+\title{A FEDERATED LEARNING AIDED SYSTEM FOR CLASSIFYING CERVICAL CANCER USING PAP-SMEAR IMAGES}
+
+
+% Uncomment/Comment the Correct Thesis Type
+\ThesisType{B.Sc. ENGINEERING THESIS}
+%\ThesisType{M.Sc. Engineering Thesis}
+%\ThesisType{Ph.D. Thesis}
+
+%% PG ONLY: Input F for full-time and P for part-time studentship
+%\StudyType{F}
+
+
+
+%% NAME OF THE STUDENTS AS AUTHORS:
+\FirstStudent{RAMIZA RUMAISA ALIYA}  % Input the NAME of the first student
+\SecondStudent{NAZIA SHEHNAZ JOYNAB}  % Input the NAME of the second student, otherwise comment
+\ThirdStudent{A.S.M. RAKIBUL HASAN}  % Input the NAME of the second student, otherwise comment
+%\FourthStudent{Student Name 4}  % Input the NAME of the fourth student, otherwise uncomment
+
+%%ROLL NUMBER OF STUDENTS 
+\FirstRoll{201914015}  % Input the Student Number of the first student
+\SecondRoll{201914032}  % Input the Student Number of the second student, otherwise uncomment
+\ThirdRoll{201914056}  % Input the Student Number of the second student, otherwise uncomment
+%\FourthRoll{XXXXXXXXXX}  % Input the Student Number of the fourth student, otherwise uncomment
+%=======================================================
+%DO NOT CHANGE the following block unknowingly
+%
+\ifdefined\@StudyType
+\author{\parbox{\textwidth}{\centering\@FirstStudent}}
+%\\SN.~\@FirstRoll (\@StudyType)}}%
+\else
+\author{\ifdefined\@FirstStudent
+	\parbox{\textwidth}{\centering\@FirstStudent}\fi\newline
+	\ifdefined\@SecondStudent
+	\parbox{\textwidth}{\centering\@SecondStudent}\fi\newline
+	\ifdefined\@ThirdStudent
+	\parbox{\textwidth}{\centering\@ThirdStudent}\fi}%\newline
+	%\ifdefined\@FourthStudent
+	%\parbox{\textwidth}{\centering\@FourthStudent~(SN.~\@FourthRoll)}\fi}
+\fi
+%=======================================================
+
+
+% AUTHOR'S QUALIFICATION: 
+%\qualifications{BSc Engg.\,(EEE), BUET} % For postgrad students only
+%
+% AUTHOR'S STUDENT NO:
+%\roll{XXXXXXXXXXX}%  % for the undergrad students, input the student number
+%\roll{Roll No.:~XXXXXXXXXXX\,(P)}% % uncomment for postgrad students, where 'P' for parttime and 'F' for fulltime student
+%
+% SESSION OF THE STUDY
+\session{2018--2019}
+%
+% DEGREE FOR THIS THESIS (No Need to Change for the MSc Students)
+%\degree{MASTER OF SCIENCE\\ \small{IN\\
+%		ELECTRICAL, ELECTRONIC AND COMMUNICATION ENGINEERING}}
+\degree{Bachelor of Science in Computer Science and Engineering}
+%
+% LOGO OF THE UNIVERSITY
+\logo{\includegraphics[height=28mm, width=30mm]{logoMIST.png}}
+%
+% NAME OF THE DEPARTMENT AWARDING THE DEGREE 
+%(NO NEED TO CHANGE FOR THE EECE DEPT STUDENTS)
+\dept{Department of Computer Science and Engineering}
+%
+% CITY OF THE UNIVERSITY (MIST)
+\MISTcity{Dhaka, Bangladesh}
+%
+% NAME OF THE UNIVERSITY WITH ADDRESS (NO NEED TO CHANGE FOR THE MIST STUDENTS)
+\university{Military Institute of Science and Technology}
+%
+%% NAME OF THE UNIVERSITY ONLY
+%\universityname{\normalsize%
+%	Military Institute of Science and Technology}
+%
+% DATE OF THESIS DEFENSE
+\DefenseDate{March 2023}
+
+%information of the supervisor
+%--------------------------------
+\SupervisorName{%
+	Lt Col Muhammad Nazrul Islam}%
+\SupervisorAffiliations{Associate Professor of Computer Science and Engineering }
+\SupervisorInstitute{MIST}
+
+%information of the supervisor
+%--------------------------------
+%\CosupervisorName{%
+%	Sumaiya Nuha Mustafina}%
+%\CosupervisorAffiliations{Lecturer of Computer Science and Engineering }
+%\CosupervisorInstitute{MIST}
+%
+%information of the Head of the Dept
+%----------------------------------
+\HeadName{Brigadier General Md Mahfuzul Karim Majumder, ndc, psc, te}%
+\HeadAffiliations{Head of the Computer Science and Engineering}
+\HeadInstitute{MIST, Dhaka, Bangladesh}
+%
+%information of the Internal Member
+%----------------------------------
+\InternalName{Nafiz Imtiaz Khan}%
+\InternalAffiliations{Lecturer of Computer Science and Engineering}
+\InternalInstitute{MIST}
+%
+% Uncomment the EXRTERNAL MEMBER BLOCK for the POSTGRAD thesis
+%information of the External Member
+%%%----------------------------------
+%\ExternalName{Dr. Satya Prasad Majumder}%
+%\ExternalAffiliations{Professor}
+%\ExternalInstitute{Department of EEE, BUET}
+%\ExternalCity{Dhaka\hypp 1205}
+
+%setting up macros
+\let\thetitle\@title
+\let\theauthor\@author
+\let\theThesisType\@ThesisType
+\let\theStudyType\@StudyType
+\let\thequal\@qualifications
+\let\theroll\@roll
+\let\thedegree\@degree
+\let\thelogo\@logo
+\let\thedept\@dept
+\let\theuniversity\@university
+\let\theMISTcity\@MISTcity
+\let\thesubyear\@date
+\let\thesession\@session
+\let\theDefenseDate\@DefenseDate
+%
+%---------------------------------------------------------------
+\ifdefined\@FirstStudent
+\let\theFirstStudent\@FirstStudent
+\let\theFirstRoll\@FirstRoll\fi
+\ifdefined\@SecondStudent
+\let\theSecondStudent\@SecondStudent
+\let\theSecondRoll\@SecondRoll\fi
+\ifdefined\@ThirdStudent
+\let\theThirdStudent\@ThirdStudent
+\let\theThirdRoll\@ThirdRoll\fi 
+%
+\let\thesupervisor\@SupervisorName
+\let\thesupervisorAffl\@SupervisorAffiliations
+\let\thesupervisorUni\@SupervisorInstitute
+%
+\let\thecosupervisor\@CosupervisorName
+\let\thecosupervisorAffl\@CosupervisorAffiliations
+\let\thecosupervisorUni\@CosupervisorInstitute
+%
+\let\thehead\@HeadName
+\let\theheadAffl\@HeadAffiliations
+\let\theheadUni\@HeadInstitute
+%
+\let\theInternal\@InternalName
+\let\theInternalAffl\@InternalAffiliations
+\let\theInternalUni\@InternalInstitute
+%
+\let\theExternal\@ExternalName
+\let\theExternalAffl\@ExternalAffiliations
+\let\theExternalUni\@ExternalInstitute
+\let\theExternalCity\@ExternalCity
+\makeatother
+
+
+%\documentclass{article} comment by NUZ
+\usepackage{mathptmx}
+\usepackage{algorithm,algorithmic}
+
+%\sectionfont{\fontsize{12}{15}\selectfont} comment by NUZ
+%\subsectionfont{\fontsize{12}{15}\selectfont} % comment ny NUZ
+
+% added by NUZ
+%********************************************
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\addto\captionsenglish{%
+ \renewcommand\chaptername{CHAPTER}}
+\addto\captionsenglish{%
+ \renewcommand\contentsname{TABLE OF CONTENTS}}
+%*************************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\usepackage[titles]{tocloft}
+\usepackage{makecell}
+\renewcommand{\cftdot}{}
+% \renewcommand\listtablename{LIST OF ALGORITHMS}
+\renewcommand{\listalgorithmname}{LIST OF ALGORITHMS}
+\begin{document}
+
+	%\fontsize{11}{12.5}\rm 
+	%\fontsize{11.5}{14}\rm
+%	\setlength{\parindent}{0pt} 
+%	\setlength{\parskip}{0.1\baselineskip}
+	% Title Page
+	% \afterpage{\blankpage}
+	\maketitle
+	%********************************
+	% Front Matter
+	\frontmatter
+	
+	%--------------------------------
+	% Certificate of examiners
+	\include{chapters/certificate}
+	%\addcontentsline{toc}{chapter}{APPROVAL CERTIFICATE}
+	
+	%--------------------------------
+	
+	%--------------------------------
+	% Statement of Original Authorship
+	%\statementofauthorship
+	\include{chapters/declaration}
+	%\addcontentsline{toc}{chapter}{CANDIDATE'S DECLARATION}
+	%--------------------------------
+	
+	%--------------------------------
+	% Dedication
+	\ifdefined\theStudyType
+	\include{chapters/dedication}\fi
+    \tableofcontents
+	\renewcommand\listfigurename{LIST OF FIGURES}
+	\listoffigures
+	\renewcommand\listtablename{LIST OF TABLES}
+	\listoftables
+    % \pagebreak
+    \newpage
+    \addcontentsline{toc}{chapter}{LIST OF ALGORITHMS}
+    \listofalgorithms
+	\include{chapters/notations}
+	\include{chapters/abstractEng}
+	\include{chapters/acknowledgments}
+	\ifdefined\theStudyType
+	\include{chapters/abbreviations}
+	\fi
+
+	
+	
+	%************************************
+	% Main Text
+	\mainmatter{ 
+		%\linespread{6}
+		\doublespacing
+		
+		%--------------------------------
+		% Chapter 1: Introduction
+		\include{chapters/introduction}
+		%--------------------------------
+		
+		
+		%--------------------------------
+		%Chapter 2: Related Works
+		\include{chapters/chapter2}
+		%--------------------------------
+		
+		%--------------------------------
+		% Chapter 3: My Work/contribution
+		\include{chapters/chapter3_bs}
+		%--------------------------------
+		
+		%--------------------------------
+		% Chapter 4: Result and analysis
+		\include{chapters/chapter4_method}
+		%--------------------------------
+		\include{chapters/chapter5_result}
+		\include{chapters/chapter6}
+		%--------------------------------
+		% Chapter 5: Conclusion and future work
+		
+		
+	}
+	%--------------------------------
+	
+	%--------------------------------
+	%List of Publications
+	%\include{chapters/listofpublications}
+	%\addcontentsline{toc}{chapter}{LIST OF PUBLICATIONS}
+	%\listofpublications 
+	%--------------------------------
+	
+	%--------------------------------
+	% References
+% 	{\small
+% 		\bibliographystyle{IEEETran}
+% 		\cleardoublepage
+% 		\phantomsection
+% 		\addcontentsline{toc}{chapter}{REFERENCES}
+% 		\bibliography{MyReferences.bib}
+% 	}
+    
+    % \bibliographystyle{agsm}
+    \bibliographystyle{apacite}
+    \bibliography{ref}
+    
+
+
+	%--------------------------------
+	
+	%--------------------------------
+	% Appendix
+	\appendix
+	\renewcommand\appendixname{APPENDIX}
+	% \include{chapters/appendix}
+	%\titlelabel{\thetitle\ - }
+	%--------------------------------
+	%\lstinputlisting{../bfsPVOfullRun.
+	
+	% \afterpage{\blankpage}
+
+\end{document}
