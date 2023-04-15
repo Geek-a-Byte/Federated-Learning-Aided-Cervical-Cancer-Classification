@@ -1,0 +1,24 @@
+\begin{algorithm}
+\caption{Apply 3X3 median filter to a 2D image}
+\begin{algorithmic}[1]
+\State $Ww \Leftarrow 3$
+\State $Wh \Leftarrow 3$
+\State Allocate $Out[w][h]$ as output pixel values.
+\State Allocate $W[Ww \times Wh]$ as window.
+\State $Ex \Leftarrow floor(Ww / 2)$
+\State $Ey \Leftarrow floor(Wh / 2)$
+    \For{$x$ := $Ex$ to ($Iw - Ex$)}
+        \For{$y$ := $Ey$ to ($Ih - Ey$)}
+            $i \Leftarrow 0$
+            \For{$fx$ := $0$ to $Ww$}
+                \For{$fy$ := $0$ to $Wh$}
+                    \State $W[i] \Leftarrow I[x + fx - Ex][y + fy - Ey]$
+                    \State $i \Leftarrow i + 1$
+                \EndFor
+            \EndFor
+            \State Sort entries of $W[]$
+            \State $Out[x][y] \Leftarrow w[Ww \times Wh / 2]$
+        \EndFor
+    \EndFor
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,74 @@
+\chapter{INTRODUCTION}
+\label{chap1:intro}
+
+%\begin{adjustwidth}{1.5cm}{0cm}
+%\begin{myenv}{Chapter Organization}
+%\small
+%Summary of the chapter orientation may be added
+%\end{myenv}
+%\end{adjustwidth}
+%\bigskip
+
+
+%=============================================
+
+This chapter puts forth a discussion on the background of the research, problem statement, objectives of the thesis, methodological overview, scope of the thesis and organization of the remaining chapters. It starts with describing the background of the research to give an insight into the problem statement and to demonstrate the objectives of the thesis. Then further details are introduced through the overview, scope and organization of the thesis.
+
+\section{Research Background}
+
+%=============================================
+Cervical cancer is a type of cancer that develops in the cells of the lower portion of the uterus which connects to the cervix. The human papillomavirus (HPV), a sexually transmitted infection, is responsible for more than 95\% cases of cervical cancer. 
+It may also be caused due to smoking, a weak immune system, birth control pills, having many sexual partners, etc. 
+
+In 2020, there was a global estimation of 604,127 new cases and 341,831 deaths due to cervical cancer \cite{ar1}. With 569,847 new cases every year, cervical cancer has become the fourth most frequent disease afflicting women globally, after breast, colorectal, and lung cancers \cite{ar2}. In the context of Bangladesh, there are 58.9 million women, aged 15 years or older, are at risk of acquiring cervical cancer \cite{b1}. Each year 4971 women die from cervical cancer while 8268 women are diagnosed with it (estimations for 2020) \cite{b1}. Therefore the second most common malignancy in Bangladeshi women is cervical cancer \cite{b1}. 
+
+Although no symptoms are visible during the early stages, some symptoms like vaginal bleeding, pelvic pain etc. are noticed later. Death due to cervical cancer can be reduced if effective screening strategies are implemented. Regular pap smear screening tests must be used to monitor women for early identification of cervical cancer so that effective treatment can be provided to the patients. For a proper diagnosis and the identification of malignant or precancerous lesions, it is crucial to classify cervical squamous cells according to their cytomorphology in Pap smear images \cite{ar3}.
+
+Existing machine learning approaches to classify cervical cell images combine two or more datasets in order to increase the model's performance. 
+But such publicly available datasets are few and far between. In order to harness the benefit of data privacy with the development of an effective deep learning model, researchers have applied FL for brain tumor segmentation and breast cancer histopathological image classification. But there is no research conducted for developing a differential privacy-enhanced FL system for cervical cell classification.
+
+%=============================================
+\section{Problem Statements}
+
+%=============================================
+
+In most of the existing methods, various machine learning and deep learning techniques have been introduced which require accumulating the pap-smear test images from different data resources in a centralized location for classification purposes. The more training data, the higher the model's accuracy. In the medical imaging domain, acquiring sufficient data is a significant challenge. Though this challenge could be addressed through collaboration between multiple institutions, sharing medical data in a centralized location faces various legal, privacy, technical, and data-ownership challenges. And also the institutions in possession of low amount of data can't achieve a satisfying performance from models trained with the existing methods.  
+
+% For the classification of cervical cancer, we propose a CNN-based Federated Learning (FL) aided system. 
+
+\clearpage
+%=============================================
+\section{Thesis Objectives}
+\label{sec:objectives}
+%=============================================
+The primary goals that we want to achieve with this research are as follows: 
+\begin{enumerate}
+\item \textcolor{black}{To propose a novel Deep Learning architecture for the classification of cervical cancer cell images considering small datasets.}
+\item \textcolor{black}{To integrate the best performed Deep Learning model with the FL architecture by evaluating them continuously using hyper-parameter tuning.}
+\item \textcolor{black}{To develop a user-friendly and interactive web app for applying the proposed Federated Learning architecture in a real-world environment.}
+\end{enumerate}
+%=============================================
+\section{Methodological Overview}
+In order to meet the desired objectives, a literature review was conducted to gather knowledge from the previous research done on the topic. The study helps to gain better knowledge on the scope and uses of federated learning and to get a proper insight as to how the classification of Cervical Cancer can be done. It helps to know about the procedure of merging the data from different hospitals using federated learning to get an improved classification, without sharing of private data. Keeping this in mind, Federated Learning architecture was applied to a novel CNN model for the classification of cancer cells.
+
+\section{Scope of the Thesis}
+The study particularly focuses on the development of a web application, through which clients from different places can add their data, which would eventually aid in getting an accurate classification of the cancer cells. Here the main target is to update the global model periodically with the help of a variety of data collected from different institutions. The collaborating institutions can benefit from this system in several ways. 
+\begin{enumerate}
+    \item 
+Federated Learning allows individual hospitals to address the challenge of possessing small dataset by collaborating with multiple non-affiliated hospitals. 
+    \item 
+Federated Learning utilizes diverse datasets of numerous collaborators for building a robust deep learning model.
+    \item 
+Federated Learning helps to classify the pap smear images of cervical cancer by aggregating locally trained model weights from different hospitals, referred to as “clients” to a centralized location model, known as the “server” model, without needing the clients to share their personal data. 
+
+\end{enumerate}
+
+% Thus, a FL-aided system can aid in the process of classifying pap smear images efficiently with the benefits of data privacy.
+
+% The use of Federated Learning gives this advantage that data from any part of the world can be used to update the model, by ensuring privacy and avoiding the misuse of personal data. Each client uses their data to train the model, which helps to collect a variety of data. The collection of such diversified data eventually improves the overall classification process and thus would help in a better diagnosis
+
+
+\section{Organization of Thesis}
+
+The remaining chapters are organized as such: The theoretical background and the related work have been discussed in chapter 2. Firstly, a detailed discussion has been put forth about Cervical Cancer. Then the existing methodologies have been discussed. Finally, a critical appraisal is given.   
+In chapter 3, a detailed description was provided of fifteen different traditional ML algorithms, Deep Learning and the process of Federated Learning. Federated Learning training algorithms: FedSGD and FedAvg were also discussed. The methodology which was carried out in this research is presented in Chapter 4. The process of system development has been discussed in chapter 5. This chapter is described using 3 subsections. The first subsection is about the acquisition of the dataset, the second subsection presents how the classical machine learning models have been developed and the results obtained from those models were analyzed. The final subsection describes how the architecture of federated learning is built from data partitioning, augmentation, foundation model development to prototype development for applying FL in a real-world environment. Thus the main purpose of this whole chapter is to give a brief discussion about the overall design of the system including the development of the base model. The ending chapter states the limitations and future works of thesis.

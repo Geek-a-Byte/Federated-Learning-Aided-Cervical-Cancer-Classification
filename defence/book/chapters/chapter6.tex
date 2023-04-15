@@ -1,0 +1,31 @@
+\chapter{CONCLUSION}\label{conclusion}
+
+
+This chapter puts forth the summarization of the overall thesis by using four subsections to demonstrate the thesis’s overview, contribution, limitations, and scope for future work
+
+\section{Thesis Overview}
+% \section{Thesis Outcome}
+The main objective of this thesis is to introduce a system which will be able to classify cervical cancer cells by ensuring privacy. A detailed literature study was conducted to get better knowledge for the development of the system. The exploration aided in knowing about the application of federated learning in classification through data collection. Since very less work has been done, this study tries to incorporate Federated learning in cervical cancer classification. This work helps to avoid data sharing which was of a signifcant challenge in the related works of the past. The work introduces a personalized convolutional neural network for the purpose of classification, which was not introduced in the works before. 
+
+The outcome of the thesis is the development of a system that makes use of a novel deep learning architecture, which makes use of the privacy ensured by Federated Learning, for the classification of any input cervical cancer cell.
+
+\section{Thesis Contribution}
+The main contribution of this thesis is the development of an interactive web application for classification of cervical cancer cells. The Deep Learning model, incorporated with the FL architecture that can operate well even with small-sized datasets. Thus the system does not require a heavy setup of devices. The system has a centralized global model and initially untrained local models, allocated for each client. The clients train the local models with their dataset, and only the updated local models get aggregated with the global model, thus ensuring privacy as their data is never collected centrally. Thus, through this system, clients from any part of the world can help to improve the accuracy of the model, without having to share their data. This helps to gain an overall enriched model as various types of data get combined for the development of the global model.
+In some recent works classification of cancer cells incorporating federated can be found, but the approaches have not introduced the development of a customized Convolutional Neural Network. A novel deep learning model, integrated with Federated Learning can result in an improved classification system even with the dearth of a large amount of data.
+
+\section{Thesis Limitations and Future Work}
+A few limitations of the thesis are: 
+\begin{enumerate}
+    \item
+    The method considers the development of a Deep Learning model, which is very time consuming owing to its high computational capacity.
+    \item
+    The proposed system incorporated data from only three hospitals. The effectiveness of the system may be improvised by the introduction of more hospitals in the future.
+    \item
+    Although crucial for accurate results, acquiring sufficient quantity of data for training purposes poses a significant limitation.
+    
+\end{enumerate}
+The future work will focus on introducing differential privacy which would help to give as accurate results as possible while maintaining privacy by enabling the quantification of the extent of privacy of a database. By deploying in the real world, the system can be upgraded through continuous user feedback. And finally, different algorithms can be tested in the future to find out which may result in better accuracy.
+
+
+
+\endinput

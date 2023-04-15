@@ -1,0 +1,71 @@
+\chapter{BACKGROUND THEORY AND RELATED WORK}
+% \label{chap2-related-works}
+This chapter is focused on the introduction of cervical cancer as well as previous research methodologies of detecting and classifying cervical cancer.
+%====Chapter Summary START======
+%\begin{adjustwidth}{1.5cm}{0cm}
+%\begin{myenv}{Chapter Organization (optional)}
+%\small
+%Briefly describe the orientation of the chapters to give an initial idea to the reader.
+%\end{myenv}
+%\end{adjustwidth}
+%\bigskip
+%=====CHAPTER SUMMARY END=======
+
+
+% \label{chap2sec:introduction}
+
+\section{Cervical Cancer}
+
+Cervical cancer occurs within the cells of the cervix. The cervix is the slender end of the uterus that forms a connection between the uterus and the birth canal. Before the appearance of cancer in the cervix, the cells of the cervix undergo such a change, in which abnormal cells are found to appear in the cervical tissue. These abnormal cells may turn to cancer cells over time, if not destroyed or removed. The cancer cells then start to grow and spread deeper into the cervix, as well as the surrounding areas. The two main types of cervical cancer are Squamous cell carcinoma and Adenocarcinoma. To detect the type and to know how far cervical cancer has spread, cell images have been divided into 5 categories here. The categories considered are Dyskeratotic, Koilocytotic, Metaplastic, Parabasal, and Superficial-Intermediate. The Dyskeratotic cells are the type of squamous cells that underwent premature abnormal
+keratinization within individual or clusters of cells. The presence of dyskeratocytes in cervical smears may be predictive of either a simultaneous HPV infection or an infection the Koilocytotic cells are mostly the mature squamous cells, and Metaplastic cells are small or large parabasal cells with prominent cellular borders which may contain large intracellular vacuole, Parabasal cells are the immature squamous cells which are the smallest epithelial cells, Superficial-Intermediate cells show morphological changes
+which indicate more severe lesions. This classification would help to know better about the severity and thus offer a better treatment accordingly.
+
+
+\section{Related Works for Cervical Cancer Classification}
+
+For the purpose of detecting cervical cancer, researchers employed three distinct classifiers: Softmax regression (SR), Support vector machine (SVM), and GentleBoost ensemble of decision trees (GEDT) \cite{ar4}. Over a convolutional neural network, they suggested using these three to create an autonomous cervical cancer detection system. They came to the conclusion that, when compared to the other strategies stated, the proposed system appeared to perform better and produced the maximum performance. 
+
+For the first time, federated learning was presented in a study on the modality of cardiovascular magnetic resonance (CMR), with four centers derived from subsets of the MM and ACDC datasets, focusing on the diagnosis of hypertrophic cardiomyopathy (HCM) \cite{ar5}. They modified a 3D-CNN network that had previously been trained on action recognition and investigated two approaches to incorporating shape prior information into the model, as well as four different data augmentation setups, systematically analyzing their impact on the various collaborative learning options. Despite the small sample size (180 subjects from four centers), they demonstrated that privacy-preserving federated learning achieves promising results that are competitive with traditional centralized learning. They also discovered that federatively trained models are more robust and less susceptible to domain shift effects. 
+
+Federated learning enabled deep learning model was used on multimodal brain scans \cite{ar6}. The quantitative results show that federated semantic segmentation models (Dice=0.852) perform similarly to models trained by sharing data (Dice=0.862). The comparison was shown among federated learning and two other collaborative learning methods and it concluded that these methods fall short of the performance of federated learning. 
+
+ A Federated learning-based cancer diagnosis model was proposed where six first-level impact indicators were identified, as well as historical case data from cancer patients \cite{ar7}. In the federated learning framework combined with the convolutional neural network, various physical examination indicators of patients were used as input. An auxiliary diagnostic model was built using patients’ recurrence time and location, and comparison algorithms included linear regression, support vector regression, Bayesian regression, gradient ascending the tree, and multilayer perceptrons neural network. CNN’s federated prediction model based on improved accuracy under the condition of joint modeling and simulation on the five types of cancer data accuracy reached more than 90. 
+
+In a study conducted by Pati et al. \cite{ar8}, The most extensive real-world FL effort to develop an accurate and generalizable ML model for detecting glioblastoma subcompartment boundaries was described in a research. Notably, the study’s collaborators’ extensive global footprint yields the largest dataset ever reported in the literature assessing this rare disease. FL provided unprecedented access to the most common and fatal adult brain tumor dataset, as well as meaningful ML training to ensure model generalizability across out-of-sample data. Because FL enabled large and diverse data, the final consensus model outperformed the public initial model against both the collaborators’ local validation data and the entire out-of-sample data.
+
+In another study, the feasibility of using differential-privacy techniques was investigated to protect patient data in a federated learning setup \cite{ar9}. They developed and tested practical federated learning systems for brain tumor segmentation on the BraTS dataset. The experimental results revealed that there is a tradeoff between model performance and privacy protection costs. 
+
+How data dispersion affects FL performance was outcome of a research \cite{ar10}. The two parts of their proposed system, bag preparation and Multiple-Instance Learning, were local to each client (MIL). The authors explored the possibility of learning from distributed medical data via differentially private federated learning. They mainly showed how FL might be utilized in clinical contexts to guarantee data privacy while also ensuring minimal performance reduction. 
+
+One study gave an outline of how federated artificial intelligence can be used in medical imaging applications while maintaining security and privacy \cite{ar11}. They talked about how AI has changed the area of medicine, what is needed for the best privacy preservation, and the privacy and security concerns with medical imaging. 
+
+The study of Ghoneim, Muhammad, \& Hossain showed the development of a cervical cancer categorization and detection method based on CNN \cite{ar12}. Three CNN models and an ELM-based classifier were studied. The shallow CNN model was trained and tested using the 5-fold cross-validation method on the Herlev dataset from the database. They concluded by demonstrating how the ELM-based classifier produced a greater accuracy than all the other methods. 
+
+The use of hybrid pipelines for the detection and classification of aberrant regions in liquid-based cytology (LBC) pictures using a combination of deep learning (DL) and traditional machine learning (ML) techniques was demonstrated in another study \cite{ar13}. They made use of a personal database containing 1920 x 2560 pixel photos. They demonstrated how to inspect cervical samples using a RetinaNet model for the detection of aberrant regions. 
+
+A pre-trained CNN architecture was used along with a support vector machine for the detection of Cervical Cancer \cite{ar14}. For the pre-trained architecture, the AlexNet was used to extract the desired features and showed how it performs better with better recall, precision, specificity and accuracy scores than other compared techniques. 
+
+In another research, the Herlev and SIPaKMeD datasets were integrated for the purpose of detecting cervical cancer. They demonstrated their ability to successfully analyze multi-layer cervical cells and developed a binary and multi-class classification pipeline to identify cancer in Pap smear images  \cite{ar15}. 
+
+ A focused study included reviews of the various cervical cancer diagnostic techniques \cite{ar16}. They called attention to the flaws and limitations of the analytical techniques and procedures. They made the observation that subpar preprocessing and segmentation resulted in subpar classification outcomes.
+
+The main discoveries made from the study include:
+\begin{enumerate}
+    \item
+    Except some recent works, very few such instances of incorporation of Federated Learning in the classification of cervical cancer cells are available.
+    \item
+    Most previous attempts of classification are methods which require data sharing which eventually hampers privacy.
+    \item
+    Most existing systems do not show concern for the development of a personalized Convolutional Neural Network model for the purpose of classification.
+\end{enumerate}
+
+
+\section{Critical Summary}
+
+In order to protect patient data privacy and produce reliable findings even with the drawback of limited data, federated learning is necessary in a variety of illness prediction and classification systems. This technique has already been used in the diagnosis of hypertrophic cardiomyopathy, the segmentation of brain tumors, the prediction of breast cancer, and many other things. A decentralized machine learning method called federated learning enables several parties to train a machine learning model without disclosing their personal information. This method has a great deal of potential in the healthcare industry, where data privacy is a major problem.
+
+Without actually sending the data to a central server, federated learning can be utilized in the healthcare industry to train models on private patient information. This can support patient privacy protection while yet allowing for medical research and individualized care. Healthcare fields including disease prediction, medication research, and clinical decision-making can all benefit from federated learning.
+
+The creation of a model to forecast diabetic retinopathy, the main cause of adult blindness, is one instance of federated learning in the healthcare industry. Without releasing the data directly, researchers trained the model using data from many hospitals using a federated learning approach. This method produced a very accurate model while preserving data privacy.
+
+Ultimately, federated learning has the potential to transform healthcare by facilitating more individualized medical research and treatment while protecting patient privacy. The standardization of data across many hospitals and ensuring the stability and dependability of the federated learning models are two obstacles that must yet be overcome.
